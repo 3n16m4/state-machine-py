@@ -50,6 +50,9 @@ class StateMachine:
             self._states.append(self._next_state)
             self._adding = False
 
+    def last_state(self):
+        self._resuming = True
+
     def update(self):
         if not self.empty():
             self.top().update()
